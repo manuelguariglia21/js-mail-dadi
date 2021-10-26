@@ -20,10 +20,29 @@ h1{
   font-size: 150px;
 }
 
+#risultato{
+  background-color: white;
+  border-radius: 30px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 #risultato.win{
-  background-color: green;
+  color: green;
+  border: 5px solid green;
 }
 
 #risultato.lose{
-  background-color: red;
+  color: red;
+  border: 5px solid red;
+}
+
+#risultato.neutral{
+  color: black;
+  border: 5px solid black;
+}
+
+#risultato i{
+  font-size: 100px;
 }

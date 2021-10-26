@@ -53,14 +53,23 @@ btnInvia.addEventListener('click',function(){
     if(userNumber > pcNumber){
       risultato.classList.add("win");
       risultato.innerHTML += `
-        <p>Hai Vinto!!</p>
+      <div class="text-center mt-2"><i class="far fa-grin-wink"></i><div>
+      <h2 class="text-center">Congratulazioni Hai Vinto!!!<h2>
       `;
     }
     else if(userNumber < pcNumber){
-      console.log("Peccato!! hai perso.");
+      risultato.classList.add("lose");
+      risultato.innerHTML += `
+      <div class="text-center mt-2"><i class="far fa-sad-tear"></i></i><div>
+      <h2 class="text-center">Peccato!!! Hai Perso.<h2>
+      `;
     }
     else{
-      console.log("Pareggio!!");
+      risultato.classList.add("neutral");
+      risultato.innerHTML += `
+      <div class="text-center mt-2"><i class="far fa-meh"></i></i></i><div>
+      <h2 class="text-center">Avete pareggiato.<h2>
+      `;
     }
   }
 
