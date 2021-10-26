@@ -23,4 +23,16 @@ else{
   console.log("Accesso esegito con successo.");
   const userNumber = Math.floor(Math.random() * 6) + 1;
   const pcNumber = Math.floor(Math.random() * 6) + 1;
+  console.log("Il tuo numero è: " + userNumber);  
+  console.log("Il numero del PC è: " + pcNumber);
+
+  if(userNumber > pcNumber){
+    console.log("Congratulazioni hai vinto!!!");
+  }
+  else if(userNumber < pcNumber){
+    console.log("Peccato!! hai perso.");
+  }
+  else{
+    console.log("Pareggio!!");
+  }
 }
