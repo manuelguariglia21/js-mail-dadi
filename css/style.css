@@ -1,5 +1,29 @@
-h1{
+body{
+  
   color:white;
+}
+
+h1{
   font-weight: bolder;
   text-shadow: 5px 5px 1px black;
+}
+
+#welcome{
+  display: block;
+}
+
+#welcome.hide{
+  display: none;
+}
+
+#play-box i{
+  font-size: 150px;
+}
+
+#risultato.win{
+  background-color: green;
+}
+
+#risultato.lose{
+  background-color: red;
 }

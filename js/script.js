@@ -17,7 +17,7 @@ btnInvia.addEventListener('click',function(){
       emailBox.classList.add("is-valid");
       btnInvia.classList.remove("bg-danger");
       btnInvia.classList.add("bg-success");
-      btnInvia.innerHTML = `Email valida, Puoi Iniziare!!`;
+      btnInvia.innerHTML = `Rigioca`;
     }
   }
 
@@ -31,14 +31,30 @@ btnInvia.addEventListener('click',function(){
 
   //Email valida Accesso consentito
   else{
-    console.log("Accesso esegito con successo.");
+    const welcomePage = document.getElementById("welcome");
+    welcomePage.classList.add("hide");
+    const userBox = document.getElementById("userBox");
+    const pcBox = document.getElementById("pcBox");
     const userNumber = Math.floor(Math.random() * 6) + 1;
     const pcNumber = Math.floor(Math.random() * 6) + 1;
-    console.log("Il tuo numero è: " + userNumber);  
-    console.log("Il numero del PC è: " + pcNumber);
+    const risultato = document.getElementById("risultato");
+
+
+    userBox.innerHTML += `
+    <div class="text-center mt-5"><i class="fas fa-user-ninja"></i><div>
+    <h2 class="text-center">Il tuo numero è <span>${userNumber}<span><h2>
+    `;
+
+    pcBox.innerHTML += `
+    <div class="text-center mt-5"><i class="fas fa-laptop"></i><div>
+    <h2 class="text-center">Il numero del PC è <span>${pcNumber}<span><h2>
+    `;
 
     if(userNumber > pcNumber){
-      console.log("Congratulazioni hai vinto!!!");
+      risultato.classList.add("win");
+      risultato.innerHTML += `
+        <p>Hai Vinto!!</p>
+      `;
     }
     else if(userNumber < pcNumber){
       console.log("Peccato!! hai perso.");
